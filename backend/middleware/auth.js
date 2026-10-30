@@ -18,7 +18,8 @@ const protect = async (req, res, next) => {
   }
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const secret = process.env.JWT_SECRET || 'spendwise_super_secure_jwt_fallback_key_2026';
+    const decoded = jwt.verify(token, secret);
     req.user = await User.findById(decoded.id).select('-password');
 
     if (!req.user) {
