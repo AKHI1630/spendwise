@@ -97,25 +97,6 @@ const LandingPage = () => {
             See How It Works
           </a>
         </div>
-
-        {/* Mock Dashboard Preview */}
-        <div className="hero-preview" style={{ marginTop: 56 }}>
-          <div className="hero-preview-card">
-            <div className="hero-preview-label">Total Balance</div>
-            <div className="hero-preview-value">&#8377;1,24,500</div>
-            <div className="hero-preview-sub">example only</div>
-          </div>
-          <div className="hero-preview-card">
-            <div className="hero-preview-label">Monthly Income</div>
-            <div className="hero-preview-value hero-preview-value--income">&#8377;85,000</div>
-            <div className="hero-preview-sub">example only</div>
-          </div>
-          <div className="hero-preview-card">
-            <div className="hero-preview-label">Monthly Expenses</div>
-            <div className="hero-preview-value hero-preview-value--expense">&#8377;42,300</div>
-            <div className="hero-preview-sub">example only</div>
-          </div>
-        </div>
       </section>
 
       {/* Features */}

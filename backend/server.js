@@ -67,6 +67,20 @@ app.get('/api/health', (req, res) => {
   res.status(200).json({ success: true, message: 'SpendWise API is running', timestamp: new Date().toISOString() });
 });
 
+// Ensure DB connection is established before route handlers
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (error) {
+    console.error('Database connection middleware error:', error.message);
+    res.status(503).json({
+      success: false,
+      message: 'Database connection error. Please verify your MongoDB credentials and network access.',
+    });
+  }
+});
+
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/transactions', require('./routes/transactions'));
