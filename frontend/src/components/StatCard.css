@@ -1,0 +1,99 @@
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: var(--transition);
+}
+
+.stat-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.stat-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.stat-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-card-icon--income {
+  background: var(--income-bg);
+  color: var(--income-color);
+}
+
+.stat-card-icon--expense {
+  background: var(--expense-bg);
+  color: var(--expense-color);
+}
+
+.stat-card-icon--primary {
+  background: var(--accent-light);
+  color: var(--accent-primary);
+}
+
+.stat-card-icon--savings {
+  background: #EDE9FE;
+  color: #7C3AED;
+}
+
+.stat-card-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.stat-card-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
+  word-break: break-all;
+}
+
+.stat-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stat-card-subtitle {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.stat-card-trend {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: 100px;
+}
+
+.stat-card-trend--positive {
+  background: var(--income-bg);
+  color: var(--income-color);
+}
+
+.stat-card-trend--negative {
+  background: var(--expense-bg);
+  color: var(--expense-color);
+}

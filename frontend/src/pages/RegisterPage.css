@@ -1,0 +1,30 @@
+/* RegisterPage.css — reuses auth-layout from LoginPage.css */
+
+/* Password strength bar */
+.pw-strength-bar-wrap {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--border);
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.pw-strength-bar {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.pw-strength-bar--weak   { background: var(--expense-color); width: 33%; }
+.pw-strength-bar--medium { background: #F59E0B; width: 66%; }
+.pw-strength-bar--strong { background: var(--income-color); width: 100%; }
+
+.pw-strength-label {
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.pw-strength-label--weak   { color: var(--expense-color); }
+.pw-strength-label--medium { color: #D97706; }
+.pw-strength-label--strong { color: var(--income-color); }
